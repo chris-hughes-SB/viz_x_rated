@@ -16,5 +16,7 @@ app.get('/',(req,res)=>{
 
 app.post('/price', (req,res)=>{
   console.log(req.body)
-  res.render('index.ejs', {vals: req.body})
+  console.log(req.body.age*req.body.multiple)
+  var price = req.body.age*req.body.multiple
+  res.render('index.ejs', {vals: req.body, price: price})
 })
